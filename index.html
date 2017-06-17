@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <script src="bower_components\angular\angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="game" ng-controller="firstCtrl as first">
+    <h1 class="header">
+        <ul>Tic-Tac-Toe</ul>
+    </h1>
+    <div class="scoreBoard container">
+        <div style="float:left" class="score">Player 1 (O)<br>Score:{{first.score1}} </div>
+        <div style="float:right" class="score">Player 2 (X)<br>Score:{{first.score2}} </div>
+    </div>
+    <div class="col-xs-offset-4 col-xs-8 grid">
+        <div class="row">
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[0].status,'btn btn-lg btn-success col-xs-2 ':first.array[0].status}" ng-click="!first.array[0] && !first.disable && first.click(0)">{{first.array[0].symbol}}  </button>
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[1].status,'btn btn-lg btn-success col-xs-2 ':first.array[1].status}" ng-click="!first.array[1] && !first.disable && first.click(1)"> {{first.array[1].symbol}} </button>
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[2].status,'btn btn-lg btn-success col-xs-2 ':first.array[2].status}" ng-click="!first.array[2] && !first.disable && first.click(2)"> {{first.array[2].symbol}} </button>
+        </div>
+        <div class="row">
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[3].status,'btn btn-lg btn-success col-xs-2 ':first.array[3].status}" ng-click="!first.array[3] && !first.disable && first.click(3)">{{first.array[3].symbol}}  </button>
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[4].status,'btn btn-lg btn-success col-xs-2 ':first.array[4].status}" ng-click="!first.array[4] && !first.disable && first.click(4)">{{first.array[4].symbol}}  </button>
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[5].status,'btn btn-lg btn-success col-xs-2 ':first.array[5].status}" ng-click="!first.array[5] && !first.disable && first.click(5)">{{first.array[5].symbol}}  </button>
+        </div>
+        <div class="row">
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[6].status,'btn btn-lg btn-success col-xs-2 ':first.array[6].status}" ng-click="!first.array[6] && !first.disable && first.click(6)">{{first.array[6].symbol}}  </button>
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[7].status,'btn btn-lg btn-success col-xs-2 ':first.array[7].status}" ng-click="!first.array[7] && !first.disable && first.click(7)">{{first.array[7].symbol}}  </button>
+            <button ng-class="{'btn btn-lg btn-danger col-xs-2 ': !first.array[8].status,'btn btn-lg btn-success col-xs-2 ':first.array[8].status}" ng-click="!first.array[8] && !first.disable && first.click(8)">{{first.array[8].symbol}}  </button>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-xs-offset-5 col-xs-4">
+            <button class=" btn btn-success">Reset</button>
+            <button class=" btn  btn-info" ng-click="first.ne()">New Game</button>
+        </div>
+    </div>
+</body>
+
+</html>
