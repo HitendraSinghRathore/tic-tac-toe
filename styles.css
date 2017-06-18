@@ -30,4 +30,5 @@ body {
 
 .btn {
     height: 3em !important;
+    margin: 2px !important;
 }
